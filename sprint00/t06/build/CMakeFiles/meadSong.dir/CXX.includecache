@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/Desktop/cpp_marathon/sprint00/t06/main.cpp
+meadSong.h
+/Users/admin/Desktop/cpp_marathon/sprint00/t06/meadSong.h
+
+/Users/admin/Desktop/cpp_marathon/sprint00/t06/meadSong.h
+iostream
+-
+
