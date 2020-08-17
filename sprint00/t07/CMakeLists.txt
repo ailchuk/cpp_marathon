@@ -1,11 +1,11 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.18.1)
 
 project(inventory)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror -Wextra")
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++11)
+
+include_directories(src/)
 
 set(CPP_SOURCES main.cpp src/inventory.cpp)
-
-#include_directories("{PROJECT_SOURCE_DIR}/src")
 
 add_executable(${PROJECT_NAME} ${CPP_SOURCES})

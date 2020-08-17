@@ -1,9 +1,6 @@
-#ifndef MEADSONG_H
-#define MEADSONG_H
+#pragma once
 
 #include <iostream>
 
 // void meadSong(int i);
 char *meadSong(int i);
-
-#endif

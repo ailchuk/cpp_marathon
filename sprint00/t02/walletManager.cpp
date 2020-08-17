@@ -10,14 +10,14 @@ Wallet *createWallet(int amount) {
 
 void destroyWallet(Wallet *w) {
   delete w;
+
+  w = NULL;
 }
 
 Wallet *createWallets(int amount) {
-  Wallet *w = new Wallet[amount];
-
-  return w;
+  return new Wallet[amount];
 }
 
-void destroyWallets(Wallet *w) {
-  delete [] w;
+void destroyWallets(Wallet *wallets) {
+  delete wallets;
 }

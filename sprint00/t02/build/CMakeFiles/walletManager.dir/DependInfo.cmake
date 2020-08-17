@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/admin/Desktop/cpp_marathon/sprint00/t02/main.cpp" "/Users/admin/Desktop/cpp_marathon/sprint00/t02/build/CMakeFiles/walletManager.dir/main.cpp.o"
   "/Users/admin/Desktop/cpp_marathon/sprint00/t02/walletManager.cpp" "/Users/admin/Desktop/cpp_marathon/sprint00/t02/build/CMakeFiles/walletManager.dir/walletManager.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "Clang")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

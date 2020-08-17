@@ -35,11 +35,11 @@ int main(int ac, char **av) {
     double stamina;
 
     if ((lvl = atoi(av[2])) == 0)
-      err(av[2]);
+      return err(av[2]);
     if ((hp = std::strtod(av[3], NULL)) == 0)
-      err(av[3]);
+      return err(av[3]);
     if ((stamina = std::atof(av[4])) == 0)
-      err(av[4]);
+      return err(av[4]);
     print(name, lvl, hp, stamina);
   }
 }

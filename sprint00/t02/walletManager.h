@@ -1,5 +1,4 @@
-#ifndef WALLETMANAGER_H
-#define WALLETMANAGER_H
+#pragma once
 
 #include <iostream>
 
@@ -10,6 +9,4 @@ struct Wallet {
 Wallet *createWallet(int amount);
 void destroyWallet(Wallet *w);
 Wallet *createWallets(int amount);
-void destroyWallets(Wallet *w);
-
-#endif
+void destroyWallets(Wallet *wallets);

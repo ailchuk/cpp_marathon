@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -std=c++11 -Wall -Werror -Wextra -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+CXX_FLAGS = -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
 

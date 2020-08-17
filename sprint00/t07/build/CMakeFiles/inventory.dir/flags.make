@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/Users/admin/Desktop/cpp_marathon/sprint00/t07/src
 
-CXX_FLAGS =  -std=c++11 -Wall -Werror -Wextra -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+CXX_FLAGS = -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
 

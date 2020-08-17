@@ -1,9 +1,6 @@
-#ifndef CASTSPELLS_H
-#define CASTSPELLS_H
+#pragma once
 
 #include <iostream>
 
 int castFloatToInt(float number);
 int *castToNonConstIntPtr(const int *ptr);
-
-#endif

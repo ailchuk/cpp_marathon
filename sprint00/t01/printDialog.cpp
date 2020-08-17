@@ -1,6 +1,5 @@
-#include <iostream>
-#include <string>
+#include "printDialog.h"
 
-void printDialog(const std::string& name, const std::string& sentence) {
-  std::cout << name << " says: " << sentence << std::endl;
+void printDialog(const std::string &name, const std::string &sentence) {
+  std::cout << name << " says: " << "\"" + sentence + "\"" << std::endl;
 }
