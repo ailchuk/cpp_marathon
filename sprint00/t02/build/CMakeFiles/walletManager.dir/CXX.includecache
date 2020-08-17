@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/Desktop/cpp_marathon/sprint00/t02/walletManager.cpp
+walletManager.h
+/Users/admin/Desktop/cpp_marathon/sprint00/t02/walletManager.h
+
+/Users/admin/Desktop/cpp_marathon/sprint00/t02/walletManager.h
+iostream
+-
+

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/Desktop/sprint00/t01/main.cpp
+printDialog.h
+/Users/admin/Desktop/sprint00/t01/printDialog.h
+
+/Users/admin/Desktop/sprint00/t01/printDialog.h
+iostream
+-
+string
+-
+
