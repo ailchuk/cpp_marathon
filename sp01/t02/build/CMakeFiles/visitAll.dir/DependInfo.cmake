@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/admin/Desktop/cpp_marathon/sprint01/t01/main.cpp" "/Users/admin/Desktop/cpp_marathon/sprint01/t01/build/CMakeFiles/moveAlong.dir/main.cpp.o"
-  "/Users/admin/Desktop/cpp_marathon/sprint01/t01/src/move.cpp" "/Users/admin/Desktop/cpp_marathon/sprint01/t01/build/CMakeFiles/moveAlong.dir/src/move.cpp.o"
+  "/Users/admin/Desktop/cpp_marathon/sp01/t02/main.cpp" "/Users/admin/Desktop/cpp_marathon/sp01/t02/build/CMakeFiles/visitAll.dir/main.cpp.o"
+  "/Users/admin/Desktop/cpp_marathon/sp01/t02/src/visit.cpp" "/Users/admin/Desktop/cpp_marathon/sp01/t02/build/CMakeFiles/visitAll.dir/src/visit.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

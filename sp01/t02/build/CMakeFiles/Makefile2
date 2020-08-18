@@ -63,16 +63,16 @@ RM = /usr/local/Cellar/cmake/3.18.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/admin/Desktop/cpp_marathon/sprint01/t01
+CMAKE_SOURCE_DIR = /Users/admin/Desktop/cpp_marathon/sp01/t02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/admin/Desktop/cpp_marathon/sprint01/t01/build
+CMAKE_BINARY_DIR = /Users/admin/Desktop/cpp_marathon/sp01/t02/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/moveAlong.dir/all
+all: CMakeFiles/visitAll.dir/all
 
 .PHONY : all
 
@@ -82,36 +82,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/moveAlong.dir/clean
+clean: CMakeFiles/visitAll.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/moveAlong.dir
+# Target rules for target CMakeFiles/visitAll.dir
 
 # All Build rule for target.
-CMakeFiles/moveAlong.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moveAlong.dir/build.make CMakeFiles/moveAlong.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moveAlong.dir/build.make CMakeFiles/moveAlong.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/admin/Desktop/cpp_marathon/sprint01/t01/build/CMakeFiles --progress-num=1,2,3 "Built target moveAlong"
-.PHONY : CMakeFiles/moveAlong.dir/all
+CMakeFiles/visitAll.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visitAll.dir/build.make CMakeFiles/visitAll.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visitAll.dir/build.make CMakeFiles/visitAll.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/admin/Desktop/cpp_marathon/sp01/t02/build/CMakeFiles --progress-num=1,2,3 "Built target visitAll"
+.PHONY : CMakeFiles/visitAll.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/moveAlong.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/cpp_marathon/sprint01/t01/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/moveAlong.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/cpp_marathon/sprint01/t01/build/CMakeFiles 0
-.PHONY : CMakeFiles/moveAlong.dir/rule
+CMakeFiles/visitAll.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/cpp_marathon/sp01/t02/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/visitAll.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/cpp_marathon/sp01/t02/build/CMakeFiles 0
+.PHONY : CMakeFiles/visitAll.dir/rule
 
 # Convenience name for target.
-moveAlong: CMakeFiles/moveAlong.dir/rule
+visitAll: CMakeFiles/visitAll.dir/rule
 
-.PHONY : moveAlong
+.PHONY : visitAll
 
 # clean rule for target.
-CMakeFiles/moveAlong.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moveAlong.dir/build.make CMakeFiles/moveAlong.dir/clean
-.PHONY : CMakeFiles/moveAlong.dir/clean
+CMakeFiles/visitAll.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visitAll.dir/build.make CMakeFiles/visitAll.dir/clean
+.PHONY : CMakeFiles/visitAll.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -67,10 +67,10 @@ RM = /usr/local/Cellar/cmake/3.18.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/admin/Desktop/cpp_marathon/sprint01/t01
+CMAKE_SOURCE_DIR = /Users/admin/Desktop/cpp_marathon/sp01/t02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/admin/Desktop/cpp_marathon/sprint01/t01/build
+CMAKE_BINARY_DIR = /Users/admin/Desktop/cpp_marathon/sp01/t02/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/cpp_marathon/sprint01/t01/build/CMakeFiles /Users/admin/Desktop/cpp_marathon/sprint01/t01/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/cpp_marathon/sp01/t02/build/CMakeFiles /Users/admin/Desktop/cpp_marathon/sp01/t02/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/cpp_marathon/sprint01/t01/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/cpp_marathon/sp01/t02/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,17 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named moveAlong
+# Target rules for targets named visitAll
 
 # Build rule for target.
-moveAlong: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 moveAlong
-.PHONY : moveAlong
+visitAll: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 visitAll
+.PHONY : visitAll
 
 # fast build rule for target.
-moveAlong/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moveAlong.dir/build.make CMakeFiles/moveAlong.dir/build
-.PHONY : moveAlong/fast
+visitAll/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visitAll.dir/build.make CMakeFiles/visitAll.dir/build
+.PHONY : visitAll/fast
 
 main.o: main.cpp.o
 
@@ -148,7 +148,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moveAlong.dir/build.make CMakeFiles/moveAlong.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visitAll.dir/build.make CMakeFiles/visitAll.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -157,7 +157,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moveAlong.dir/build.make CMakeFiles/moveAlong.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visitAll.dir/build.make CMakeFiles/visitAll.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -166,35 +166,35 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moveAlong.dir/build.make CMakeFiles/moveAlong.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visitAll.dir/build.make CMakeFiles/visitAll.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/move.o: src/move.cpp.o
+src/visit.o: src/visit.cpp.o
 
-.PHONY : src/move.o
+.PHONY : src/visit.o
 
 # target to build an object file
-src/move.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moveAlong.dir/build.make CMakeFiles/moveAlong.dir/src/move.cpp.o
-.PHONY : src/move.cpp.o
+src/visit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visitAll.dir/build.make CMakeFiles/visitAll.dir/src/visit.cpp.o
+.PHONY : src/visit.cpp.o
 
-src/move.i: src/move.cpp.i
+src/visit.i: src/visit.cpp.i
 
-.PHONY : src/move.i
+.PHONY : src/visit.i
 
 # target to preprocess a source file
-src/move.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moveAlong.dir/build.make CMakeFiles/moveAlong.dir/src/move.cpp.i
-.PHONY : src/move.cpp.i
+src/visit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visitAll.dir/build.make CMakeFiles/visitAll.dir/src/visit.cpp.i
+.PHONY : src/visit.cpp.i
 
-src/move.s: src/move.cpp.s
+src/visit.s: src/visit.cpp.s
 
-.PHONY : src/move.s
+.PHONY : src/visit.s
 
 # target to generate assembly for a file
-src/move.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/moveAlong.dir/build.make CMakeFiles/moveAlong.dir/src/move.cpp.s
-.PHONY : src/move.cpp.s
+src/visit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visitAll.dir/build.make CMakeFiles/visitAll.dir/src/visit.cpp.s
+.PHONY : src/visit.cpp.s
 
 # Help Target
 help:
@@ -204,13 +204,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... moveAlong"
+	@echo "... visitAll"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/move.o"
-	@echo "... src/move.i"
-	@echo "... src/move.s"
+	@echo "... src/visit.o"
+	@echo "... src/visit.i"
+	@echo "... src/visit.s"
 .PHONY : help
 
 

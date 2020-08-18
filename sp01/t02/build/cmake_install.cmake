@@ -1,4 +1,4 @@
-# Install script for directory: /Users/admin/Desktop/cpp_marathon/sprint01/t01
+# Install script for directory: /Users/admin/Desktop/cpp_marathon/sp01/t02
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/admin/Desktop/cpp_marathon/sprint01/t01/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/admin/Desktop/cpp_marathon/sp01/t02/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
