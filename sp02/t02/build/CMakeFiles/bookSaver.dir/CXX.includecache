@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/book.h
+iostream
+-
+sstream
+-
+map
+-
+string
+-
+fstream
+-
+sys/types.h
+-
+dirent.h
+-
+errno.h
+-
+
+/Users/admin/Desktop/cpp_marathon/sp02/t02/main.cpp
+book.h
+/Users/admin/Desktop/cpp_marathon/sp02/t02/book.h
+
