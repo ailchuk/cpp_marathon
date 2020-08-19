@@ -55,9 +55,6 @@ std::string edit_file(std::string file) {
 
 void save(std::forward_list<std::string> fl, char *av) {
   std::forward_list<std::string> edited = edit_names(fl);
- 
-  for (auto i : edited)
-    std::cout << i << std::endl;
 
   std::ofstream new_file(edit_file(av));
 

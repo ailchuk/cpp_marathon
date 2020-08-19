@@ -7,12 +7,13 @@ int main (int ac, char **av) {
   }
   else {
     std::deque<Route> dq;
-    for (int i = 1; i < ac; i++) {
-      if (parse(av[i], dq) == 1)
+    std::deque<Route> best;
+    
+    for (int i = 1; i < ac; i++)
+      if (parse(std::string(av[i]), dq) == 1)
         return 1;
-    }
-    print(dq);
-    std::cout << " ==== \n";
+    
+    // std::cout << " ==== \n";
     std::cout << std::endl;
     for (const auto &i : dq)
       std::cout << i.name << " " << i.stamina << " " << i.dist << "\n";

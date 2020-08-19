@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/Desktop/cpp_marathon/sp01/t05/src/algov2.cpp
+algov2.h
+/Users/admin/Desktop/cpp_marathon/sp01/t05/src/algov2.h
+
+/Users/admin/Desktop/cpp_marathon/sp01/t05/src/algov2.h
+iostream
+-
+forward_list
+-
+fstream
+-
+algorithm
+-
+sstream
+-
+

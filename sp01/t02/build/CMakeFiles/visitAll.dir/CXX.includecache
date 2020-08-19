@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+../src/visit.h
+iostream
+-
+deque
+-
+string
+-
+sstream
+-
+vector
+-
+
+/Users/admin/Desktop/cpp_marathon/sp01/t02/main.cpp
+visit.h
+/Users/admin/Desktop/cpp_marathon/sp01/t02/visit.h
+
 /Users/admin/Desktop/cpp_marathon/sp01/t02/src/visit.cpp
 visit.h
 /Users/admin/Desktop/cpp_marathon/sp01/t02/src/visit.h

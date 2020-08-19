@@ -6,11 +6,19 @@
 #include <sstream>
 #include <vector>
 
-struct Route {
+struct City {
   std::string name;
   int stamina;
-  int dist;
+  int next;
+  int prev;
+  int id;
 };
 
-int parse(char *av, std::deque<Route> &dq);
+struct Path {
+  int dist;
+  int stamina;
+  std::deque<int> ids;
+}
+
+int parse(std::string av, std::deque<Route> &dq);
 void print(std::deque<Route> &dq);

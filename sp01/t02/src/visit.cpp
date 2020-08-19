@@ -6,37 +6,21 @@ static void check(size_t idx, std::string str) {
 }
 
 void print(std::deque<Route> &dq) {
-  std::deque<std::string> nw;
-  int cur = 0;
-
-  for (int i = 0; i < dq.size(); ++i) {
-    dq[i].stamina += cur;
-    if (dq[i].stamina > dq[i + 1].dist) {
-      cur += dq[i].stamina;
-      nw.push_front(dq[i].name);
-    }
-    // else {
-      // nw.push_front(dq[i].name);
-    // }
-  }
-
-  for (const auto &i : nw) {
-    std::cout << i << " ";
-  }
+  // std::deque<std::string> nw;
+  // int cur = 0;
 
 }
 
-int parse(char *av, std::deque<Route> &dq) {
-  std::string tmp = av; 
+int parse(std::string av, std::deque<City> &dq) {
   std::string n_str;
   std::vector<std::string> v;
   int stamina, dist;
   size_t idx;
-  Route *r = new Route;
+  City *r = new City;
 
-  std::replace(tmp.begin(), tmp.end(), ',', ' ');
+  std::replace(av.begin(), av.end(), ',', ' ');
   
-  std::stringstream ss(tmp);
+  std::stringstream ss(av);
   
   while (ss >> n_str)
     v.push_back(n_str);
@@ -45,7 +29,7 @@ int parse(char *av, std::deque<Route> &dq) {
     r->name = v[0];
     r->stamina = std::stoi(v[1], &idx);
     check(idx, v[1]);
-    r->dist = std::stoi(v[2], &idx);
+    r-> = std::stoi(v[2], &idx);
     check(idx, v[2]);
   }
   catch (...) {
@@ -53,6 +37,5 @@ int parse(char *av, std::deque<Route> &dq) {
     return 1;
   }
   dq.push_back(*r);
-  
   return 0;
 }
