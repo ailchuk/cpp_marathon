@@ -1,6 +1,6 @@
 #include "algov2.h"
 
-static bool duplicate(std::string str, std::forward_list<std::string> fl) {
+static bool is_duplicate(std::string str, std::forward_list<std::string> fl) {
   for (std::string i : fl)
     if (i == str)
       return true;
@@ -15,50 +15,59 @@ static bool is_cbl(std::string str) {
   return false;
 }
 
-std::forward_list<std::string> edit_names(std::forward_list<std::string> fl) {
-  std::forward_list<std::string> tmp;
-  std::forward_list<std::string> ret_names;
+static bool is_short(std::string str) {
+    if (str.size() < 5)
+        return true;
+    return false;
+}
 
-  for (std::string i : fl)
-    if (!is_cbl(i))
-      tmp.push_front(i);
+static bool is_long(std::string str) {
+    if (str.size() > 12)
+        return true;
+    return false;
+}
 
-  replace_if(tmp.begin(), tmp.end(), [](std::string str) {
-            return str.length() > 10;
-            }, "Long one");
+std::forward_list<std::string> edit_fl(std::forward_list<std::string> &fl) {
+  std::forward_list<std::string> ret_fl;
 
-  replace_if(tmp.begin(), tmp.end(), [](std::string str) {
-            return str.length() < 4;
-            }, "Short one");
+  for (std::string str : fl)
+    if (!is_cbl(str))
+      ret_fl.push_front(str);
 
-  for (std::string i : tmp)
-    if (!duplicate(i, ret_names))
-      ret_names.push_front(i);
+  std::replace_if(ret_fl.begin(), ret_fl.end(), 
+    [](std::string str) { return str.length() > 10; }, "Long one");
 
-    return ret_names;
+  std::replace_if(ret_fl.begin(), ret_fl.end(),
+    [](std::string str) { return str.length() < 4; }, "Short one");
+  ret_fl.sort();
+  auto del = unique(ret_fl.begin(), ret_fl.end());
+  auto prev = ret_fl.before_begin();
+  for (auto curr = ret_fl.begin(); curr != del; curr++)
+    prev = curr;
+  ret_fl.erase_after(prev, ret_fl.end());
+  ret_fl.reverse();
+  return ret_fl;
 }
 
 std::string edit_file(std::string file) {
-    int dot = file.find('.');
+    int file_dot = file.find('.');
     std::stringstream ss;
 
-    if (dot == std::string::npos)
+    if (file_dot == std::string::npos)
         ss << file << "_mod";
     else {
-        ss << file.substr(0, dot);
+        ss << file.substr(0, file_dot);
         ss << "_mod";
-        ss << file.substr(dot, file.length());
+        ss << file.substr(file_dot, file.length());
     }
 
     return ss.str();
 }
 
 void save(std::forward_list<std::string> fl, char *av) {
-  std::forward_list<std::string> edited = edit_names(fl);
-
   std::ofstream new_file(edit_file(av));
-
-  for (std::string str : edited)
+  
+  for (std::string &str : fl)
     new_file << str << std::endl;
 
   new_file.close();

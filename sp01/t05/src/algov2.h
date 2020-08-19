@@ -7,5 +7,5 @@
 #include <sstream>
 
 void str_trim(std::string &s);
+std::forward_list<std::string> edit_fl(std::forward_list<std::string> &fl);
 void save(std::forward_list<std::string> fl, char *av);
-std::forward_list<std::string> edit_names(std::forward_list<std::string> fl);

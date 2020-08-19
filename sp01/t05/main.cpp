@@ -18,7 +18,7 @@ int main(int ac, char **av) {
         if (tmp.length() > 0)
           fl.push_front(tmp);
       }
-      save(fl, av[1]);
+      save(edit_fl(fl), av[1]);
     }
     catch (...) {
       std::cerr << "error" << std::endl;

@@ -9,16 +9,10 @@
 struct City {
   std::string name;
   int stamina;
-  int next;
-  int prev;
-  int id;
+  int dist;
+  int idx;
 };
 
-struct Path {
-  int dist;
-  int stamina;
-  std::deque<int> ids;
-}
-
-int parse(std::string av, std::deque<Route> &dq);
-void print(std::deque<Route> &dq);
+int parse(std::string av, std::deque<City> &dq, int i);
+int algo(std::deque<City> &dq, std::deque<City> &town, int i, int ac);
+void print(std::deque<City> &ct);

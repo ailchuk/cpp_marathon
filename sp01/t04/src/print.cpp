@@ -19,7 +19,7 @@ void none_of_len(const std::forward_list<std::string> &lst) {
           return str.length() == 15;
       });
   std::cout << "none of lengths is 15: " 
-            << (is_none ? "true" : "false") << std::endl;
+            << (is_none ? "false" : "true") << std::endl;
 }
 
 void vel(const std::forward_list<std::string> &lst) {
@@ -40,7 +40,7 @@ void mel(const std::forward_list<std::string> &lst) {
 
   no_mel = count_if(lst.begin(), lst.end(), 
       [](std::string str) {
-          return str.find("mel") != std::string::npos;
+          return str.find("mel") == std::string::npos;
       });
   std::cout << "not contains 'mel': " << no_mel << std::endl;
 }
