@@ -17,11 +17,9 @@ string
 -
 fstream
 -
-sys/types.h
--
 dirent.h
 -
-errno.h
+cstdio
 -
 
 /Users/admin/Desktop/cpp_marathon/sp02/t02/main.cpp

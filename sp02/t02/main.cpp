@@ -12,14 +12,13 @@ int main(int ac, char **av) {
       std::cout << "Bye." << std::endl;
       return 0;
     } else if (command == "add") {
-      std::cout << command << std::endl;
       add_book(lib);
     } else if (command == "delete") {
-      std::cout << command << std::endl;
+      delete_book(lib);
     } else if (command == "read") {
-      std::cout << command << std::endl;
+      read(lib);
     } else if (command == "list") {
-      std::cout << command << std::endl;
+      list(lib);
     } else {
       std::cerr << "Invalid command." << std::endl;
     }

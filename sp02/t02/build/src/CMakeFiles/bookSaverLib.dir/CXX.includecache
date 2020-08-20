@@ -21,10 +21,8 @@ string
 -
 fstream
 -
-sys/types.h
--
 dirent.h
 -
-errno.h
+cstdio
 -
 
