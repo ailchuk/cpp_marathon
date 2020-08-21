@@ -8,7 +8,7 @@ bool isPalindrome(BidirectionalIterator begin, BidirectionalIterator end) {
       return false;
     begin++;
     if (begin == end)
-      return true;
+      return false;
     end--;
   }
   return true;
