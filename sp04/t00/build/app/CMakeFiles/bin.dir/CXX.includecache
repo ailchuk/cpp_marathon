@@ -11,6 +11,8 @@ algorithm
 -
 iostream
 -
+numeric
+-
 
 /Users/ailchuk/Desktop/cpp_marathon/sp04/t00/app/main.cpp
 vector
