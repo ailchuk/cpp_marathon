@@ -2,14 +2,5 @@
 
 template <class BidirectionalIterator>
 bool isPalindrome(BidirectionalIterator begin, BidirectionalIterator end) {
-  end--;
-  while (begin != end) {
-    if (*begin != *end)
-      return false;
-    begin++;
-    if (begin == end)
-      return false;
-    end--;
-  }
-  return true;
+  return std::equal(begin, std::next(begin, std::distance(begin, end) / 2), std::make_reverse_iterator(end));
 }
