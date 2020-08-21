@@ -7,7 +7,7 @@ RandomAccessIterator sortValues(RandomAccessIterator begin, RandomAccessIterator
   for (auto a = begin; a != end; a++) {
     for (auto b = begin; b != end; b++) {
       if (*a < *b)
-        std::swap(a, b);
+        std::iter_swap(a, b);
     }
   }
   return begin;
