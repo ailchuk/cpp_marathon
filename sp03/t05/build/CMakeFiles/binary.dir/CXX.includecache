@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/Desktop/cpp_marathon/sp03/t05/main.cpp
+squareValue.h
+/Users/admin/Desktop/cpp_marathon/sp03/t05/squareValue.h
+iostream
+-
+vector
+-
+
+/Users/admin/Desktop/cpp_marathon/sp03/t05/squareValue.h
+iterator
+-
+

@@ -9,16 +9,14 @@
 /Users/admin/Desktop/cpp_marathon/sp03/t03/main.cpp
 sumFileData.h
 /Users/admin/Desktop/cpp_marathon/sp03/t03/sumFileData.h
+iostream
+-
 
 /Users/admin/Desktop/cpp_marathon/sp03/t03/sumFileData.h
-string
--
 fstream
--
-iostream
 -
 iterator
 -
-algorithm
+string
 -
 

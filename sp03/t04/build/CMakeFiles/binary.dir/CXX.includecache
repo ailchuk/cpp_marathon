@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/Desktop/cpp_marathon/sp03/t04/main.cpp
+outputContainer.h
+/Users/admin/Desktop/cpp_marathon/sp03/t04/outputContainer.h
+vector
+-
+
+/Users/admin/Desktop/cpp_marathon/sp03/t04/outputContainer.h
+iostream
+-
+iterator
+-
+
