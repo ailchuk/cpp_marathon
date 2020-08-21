@@ -1,3 +1,0 @@
-/Users/admin/Desktop/cpp_marathon/sp03/t04/build/CMakeFiles/rebuild_cache.dir
-/Users/admin/Desktop/cpp_marathon/sp03/t04/build/CMakeFiles/edit_cache.dir
-/Users/admin/Desktop/cpp_marathon/sp03/t04/build/CMakeFiles/binary.dir
