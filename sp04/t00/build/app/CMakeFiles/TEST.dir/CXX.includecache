@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../utils/algorithmUtils.h
+algorithm
+-
+iostream
+-
+
+/Users/ailchuk/Desktop/cpp_marathon/sp04/t00/app/main.cpp
+algorithmUtils.h
+/Users/ailchuk/Desktop/cpp_marathon/sp04/t00/app/algorithmUtils.h
+
