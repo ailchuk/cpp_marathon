@@ -5,5 +5,5 @@
 template <class Container>
 void outputAny(const Container& c) {
   for (const auto &i : c)
-    std::cout << i << std::endl;
+    std::cout << i << '\n';
 }
