@@ -6,6 +6,6 @@
 
 template <class T>
 T sumFileData(const std::string& fileName) {
-  std::ifstream file(fileName);
-  return std::accumulate(std::istream_iterator<T>(file), {}, 0);
+  std::ifstream ss(fileName);
+  return std::accumulate(std::istream_iterator<T> begin(ss), {}, 0);
 }
