@@ -1,11 +1,11 @@
 #pragma once
+#include <iostream>
 
 class Axe final {
-public:
-    Axe(int damage);
-    
-    int getDamage() const;
+ public:
+  Axe(int damage);
+  int getDamage() const;
 
-private:
-    const int m_damage;
+ private:
+  const int m_damage;
 };

@@ -1,20 +1,14 @@
-cmake_minimum_required(VERSION 3.18)
+cmake_minimum_required(VERSION 2.8)
 
-project(imperialVsStormcloak)
+project(app)
 
-add_compile_options(
-        -std=c++17
-        -Werror
-        -Wall
-        -Wextra
-        -Wpedantic
-        -Wno-unused-parameter
-)
+list(APPEND SRC_FILES Axe.cpp ImperialSoldier.cpp Stormcloaksoldier.cpp
+    Sword.cpp)
 
-include_directories(src/)
+foreach(file ${SRC_FILES})
+    list(APPEND SRCS src/${file})
+endforeach()
 
-set(SRC_SOURCES src/file.cpp)
+add_library(src STATIC ${SRCS})
 
-set(SOURCE_EXE main.cpp ${SRC_SOURCES})
 
-add_executable(${PROJECT_NAME} ${SOURCE_EXE})
