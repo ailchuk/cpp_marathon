@@ -1,6 +1,23 @@
+#include <array>
 #include <vector>
 
 #include "algorithmUtils.h"
+
+bool Predicate(const std::string& s) {
+    return s.size() < 6;
+}
+
+int Multiply(int a) {
+  return a * a;
+}
+
+bool Comp(const int& a, const int& b) {
+  return a < b;
+}
+
+bool Predicate2(const std::string& s1, const std::string& s2) {
+  return s1 == s2;
+}
 
 int main() {
   // std::cout << "IsInRange\n" << "======================================================\n";
@@ -92,9 +109,11 @@ int main() {
   // std::cout << Max(10, 12, 123, 1, 213, 21) << '\n';
   // std::cout << "======================================================\n";
 
-  // std::cout << "\nMaxElement\n" << "======================================================\n";
+  // // std::cout << "\nMaxElement\n" << "======================================================\n";
   // std::vector<int> v = {1, 2, 3, 4, 5, 6, 7, 8, 12};
-  // std::cout << MaxElement(v);
+  // // std::array<int, 3> a = {1, 2, 3};
+
+  // std::cout << *MaxElement(v);
   // std::cout << "\n======================================================\n";
 
   // std::cout << "\nMinElement\n" << "======================================================\n";
@@ -115,7 +134,11 @@ int main() {
   // for (const auto &i : vb)
   //   std::cout << i << " ";
   // std::cout << "\n======================================================\n";
-
+  // std::vector<int> v3 {14, 6, 45, 8, 0};
+  //     Sort(v3, Comp);
+  //      for (const auto& item : v3)
+  //         std::cout << item << " ";
+  //     std::cout << '\n';
   // std::cout << "\nUnique\n" << "======================================================\n";
   // std::vector<int> vb = {22, 12, 22, 1512, 22, 2, 4, 22};
   // for (const auto &i : vb)
@@ -126,32 +149,48 @@ int main() {
   // for (const auto &i : vb)
   //   std::cout << i << " ";
   // std::cout << '\n';
+  //     {
+  //       std::vector<std::string> V_s {"A", "B", "C", "A", "C", "B", "B"};
+  //       Unique(V_s, Predicate2);
+  //       for (const auto& item : V_s)
+  //           std::cout << item << " ";
+  //       std::cout << '\n';
+  //   }
   // std::cout << "======================================================\n";
 
   // std::cout << "\nForEach\n" << "======================================================\n";
-  // std::vector<int> vb = {22, 12, 22, 1512, 22, 2, 4, 22};
-  
-  // ForEach(vb, [] (auto i) { std::cout << i << " "; });
-  
+  // // std::vector<int> vb = {22, 12, 22, 1512, 22, 2, 4, 22};
+
+  // // ForEach(vb, [] (auto i) { std::cout << i << " "; });
+  //     {
+  //       std::vector<int> v4 {14, 6, 45, 8, 0};
+  //       ForEach(v4, Multiply);
+  //       for (const auto& item : v4)
+  //           std::cout << item << " ";
+  //       std::cout << '\n';
+  //   }
   // std::cout << '\n';
   // std::cout << "======================================================\n";
 
-  std::cout << "\nIndexOf\n" << "======================================================\n";
-  std::vector<int> vb = {22, 12, 22, 1512, 22, 2, 4, 22};
-  std::cout << IndexOf(vb, 12345);
-  std::cout << '\n';
-  std::cout << IndexOf(vb, 1512);
-  std::cout << "\n======================================================\n";
+  // std::cout << "\nIndexOf\n" << "======================================================\n";
+  // std::vector<int> vb = {22, 12, 22, 1512, 22, 2, 4, 22};
+  // std::cout << IndexOf(vb, 12345);
+  // std::cout << '\n';
+  // std::cout << IndexOf(vb, 1512);
+  // std::cout << "\n======================================================\n";
 
-  std::cout << "\nIndexOfIf\n" << "======================================================\n";
-  std::vector<int> vw = {22, 12, 22, 1512, 22, 2, 4, 22};
-  std::cout << IndexOfIf(vw, [](auto i) { return i == 22; });
-  std::cout << '\n';
-  std::cout << IndexOfIf(vw, [](auto i) { return i != 22; });
-  std::cout << "======================================================\n";
+  // std::cout << "\nIndexOfIf\n" << "======================================================\n";
+  // std::vector<int> vw = {22, 12, 22, 1512, 22, 2, 4, 22};
+  // std::cout << IndexOfIf(vw, [](auto i) { return i == 22; });
+  // std::cout << '\n';
+  // std::cout << IndexOfIf(vw, [](auto i) { return i != 22; });
+  // std::cout << "======================================================\n";
 
   // std::cout << "\nUnique\n" << "======================================================\n";
   // std::cout << "======================================================\n";
+  std::string name = "Alisa";
+  std::cout << IndexOf(name, 's') << '\n';
 
-
+  std::array<std::string, 3> a = {"hellooo", "worldooo", "a"};
+  std::cout << IndexOfIf(a, Predicate) << "\n";
 }

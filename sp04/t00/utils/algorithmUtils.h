@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <iostream>
 #include <numeric>
+#include <utility>
 
 template <typename T>
 bool IsInRange(const T& val, const T& from, const T& to) {
@@ -58,12 +59,12 @@ auto FindIf(Collection& c, Pred&& predicate) {
 
 template <class Collection, class T>
 bool Contains(const Collection& c, const T& value) {
-  return (std::end(c) != Find(c, value)) ? true : false;
+  return std::end(c) != Find(c, value);
 };
 
 template <class Collection, class Pred>
 bool ContainsIf(const Collection& c, Pred&& predicate) {
-  return (std::end(c) != FindIf(c, predicate)) ? true : false;
+  return std::end(c) != FindIf(c, predicate);
 };
 
 template <class Collection, class Pred>
@@ -111,23 +112,33 @@ void Sort(Collection& c, Comp&& comparator) {
   std::sort(std::begin(c), std::end(c), comparator);
 }
 
-// template <class Collection>
-// void Unique(Collection& c) {
-//   auto last = std::unique(std::begin(c), std::end(c));
-//   c.erase(last, std::end(c));
-//   std::sort(std::begin(c), std::end(c));
-//   last = std::unique(std::begin(c), std::end(c));
-//   c.erase(last,std::end(c));
-// }
+template <class Collection>
+void Unique(Collection& c) {
+  std::sort(std::begin(c), std::end(c));
+  
+  auto begin = std::unique(std::begin(c), std::end(c));
+  
+  Collection b (c.begin(), begin);
+  
+  c = b;
+}
 
-// template <class Collection, class Pred>
-// void Unique(Collection& c, Pred&& predicate) {
-//   std::unique(std::begin(c), std::end(c), predicate);
-// }
+template <class Collection, class Pred>
+void Unique(Collection& c, Pred&& predicate) {
+  std::sort(std::begin(c), std::end(c));
+
+  auto begin = std::unique(std::begin(c), std::end(c), predicate);
+
+  Collection b (c.begin(), begin);
+  
+  c = b;
+}
 
 template <class Collection, class Pred>
 void ForEach(Collection& c, Pred&& predicate) {
-  std::for_each(std::begin(c), std::end(c), predicate);
+    for (auto it = c.begin(); it != c.end(); ++it) {
+        *it = predicate(*it);
+    }
 }
 
 template <class Collection, class T>
