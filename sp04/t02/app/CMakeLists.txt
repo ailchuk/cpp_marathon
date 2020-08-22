@@ -1,21 +1,9 @@
-cmake_minimum_required(VERSION 3.18)
+cmake_minimum_required(VERSION 2.8)
 
-project(imperialVsStormcloak)
+project(app)
 
-add_compile_options(
-        -std=c++17
-        -Werror
-        -Wall
-        -Wextra
-        -Wpedantic
-        -Wno-unused-parameter
-)
-
-include_directories(src/)
-
-set(SRC_SOURCES src/Axe.cpp src/ImperialSoldier.cpp 
-        src/StormcloakSoldier.cpp src/Sword.cpp)
-
-set(SOURCE_EXE main.cpp ${SRC_SOURCES})
-
-add_executable(${PROJECT_NAME} ${SOURCE_EXE})
+list(APPEND SOURCE_FILES dragonborn.cpp)
+foreach(file ${SOURCE_FILES})
+    list(APPEND SOURCE_PATHES src/${file})
+endforeach()
+add_library(app STATIC ${SOURCE_PATHES})
