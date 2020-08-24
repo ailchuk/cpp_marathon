@@ -9,8 +9,8 @@ public:
   Draugr(); // 1
   Draugr(int fr); // 2
   Draugr(double hp, int fr = 50); // 3
-  // Draugr(Draugr& other) = delete;
-  // Draugr(Draugr&& other) = delete;
+  Draugr(Draugr &&) = delete;
+  void operator=(Draugr &) = delete;
 
   void shoutPhrase(int shoutNumber) const;
   void setName(const std::string&& name);

@@ -1,11 +1,8 @@
 #include "draugr.h"
 
-Draugr::Draugr() : m_health(100), m_frostResist(50){};  // 1
+Draugr::Draugr() : Draugr(100, 50) {};  // 1
 
-Draugr::Draugr(int fr) : m_health(100), m_frostResist(fr){
-    std::cout << "Draugr with " << m_health << " health and "
-            << fr << "% frost resist was born!\n";
-};  // 2
+Draugr::Draugr(int fr) : Draugr (100, fr) {};  // 2
 
 Draugr::Draugr(double hp, int fr) : m_health(hp), m_frostResist(fr) {
   std::cout << "Draugr with " << hp << " health and "

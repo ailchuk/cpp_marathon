@@ -1,15 +1,5 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.18)
 
-project(werewolf)
-
-set(FLAGS "-std=c++17")
-
-add_definitions(${FLAGS})
+project(t05)
 
 add_subdirectory(app)
-
-set(SOURCE_EXE app/main.cpp)
-
-add_executable(werewolf ${SOURCE_EXE})
-
-target_link_libraries(werewolf src)
