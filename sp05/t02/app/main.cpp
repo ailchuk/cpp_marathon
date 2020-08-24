@@ -10,30 +10,44 @@ static std::vector<std::string> split(const std::string& s, char delim) {
   return elems;
 }
 
-static void foo(const int& ac,
-                char** av, const std::vector<std::string>& names) {
-  if (ac == 4) {
-    Draugr d(std::stod(av[3]));
-    d.setName(std::string(names[0]));
-    d.shoutPhrase(std::stoi(av[1]));
-    Draugr next(d);
-    next.setName(std::string(names[1]));
-    next.shoutPhrase(std::stoi(av[1]));
-  }
-  if (ac == 5 && names.size() == 2) {
-    Draugr d(std::stod(av[3]), std::stoi(av[4]));
-    d.setName(std::string(names[0]));
-    d.shoutPhrase(std::stoi(av[1]));
-    Draugr next = std::move(d);
-    // Draugr next = d;
-    next.setName(std::string(names[1]));
-    next.shoutPhrase(std::stoi(av[1]));
-  }
+static void foo4(char** av, const std::vector<std::string>& names) {
+  size_t idx = 0;
+  double hp;
+
+  hp = std::stod(av[3], &idx);
+  if (av[3][idx] != '\0')
+    throw 1;
+  Draugr d(hp);
+  d.setName(std::string(names[0]));
+  d.shoutPhrase(std::stoi(av[1]));
+  Draugr next(d);
+  next.setName(std::string(names[1]));
+  next.shoutPhrase(std::stoi(av[1]));
+}
+
+static void foo5(char** av, const std::vector<std::string>& names) {
+  size_t idx = 0;
+  double hp;
+  int fr;
+
+  hp = std::stod(av[3], &idx);
+  if (av[3][idx] != '\0')
+    throw 1;
+  fr = std::stoi(av[4], &idx, 10);
+  if (av[4][idx] != '\0')
+    throw 1;
+  Draugr d(hp, fr);
+  d.setName(std::string(names[0]));
+  d.shoutPhrase(std::stoi(av[1]));
+  Draugr next(std::move(d));
+  next.setName(std::string(names[1]));
+  next.shoutPhrase(std::stoi(av[1]));
 }
 
 int main(int ac, char** av) {
   if (ac > 6 || ac < 3) {
-    std::cerr << "usage: ./draugr [shoutNumber] [name1,name2] [health] [frostResist]\n";
+    std::cerr << "usage: ./draugr [shoutNumber] [name1,name2] [health]"
+                 "[frostResist]\n";
     return 1;
   } else {
     try {
@@ -46,7 +60,10 @@ int main(int ac, char** av) {
         std::cerr << "Invalid shoutNumber\n";
         return 1;
       }
-      foo(ac, av, names);
+      if (ac == 4)
+        foo4(av, names);
+      if (ac == 5)
+        foo5(av, names);
     } catch (...) {
       std::cerr << "Error\n";
       return 1;
