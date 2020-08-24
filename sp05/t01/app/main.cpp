@@ -1,7 +1,7 @@
 #include "src/draugr.h"
 
 int main(int ac, char** av) {
-  if (ac > 4) {
+  if (ac > 4 || ac < 2) {
     std::cerr << "usage: ./draugr [shoutNumber] [health] [frostResist]\n";
     return 1;
   } else {

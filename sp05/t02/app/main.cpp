@@ -47,7 +47,7 @@ static void foo5(char** av, const std::vector<std::string>& names) {
 int main(int ac, char** av) {
   if (ac > 6 || ac < 3) {
     std::cerr << "usage: ./draugr [shoutNumber] [name1,name2] [health]"
-                 "[frostResist]\n";
+                 " [frostResist]\n";
     return 1;
   } else {
     try {

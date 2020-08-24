@@ -1,13 +1,15 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.18)
 
-project(app)
+project(draugr)
 
-list(APPEND SRC_FILES draugr.cpp)
+set(CMAKE_CXX_STANDARD 17)
 
-foreach(file ${SRC_FILES})
-    list(APPEND SRCS src/${file})
-endforeach()
+set(SOURCE_EXE main.cpp)
 
-add_library(src STATIC ${SRCS})
+include_directories(src)
 
+add_executable(draugr ${SOURCE_EXE})
 
+add_subdirectory(src)				# Добавление подпроекта, указывается имя дирректории
+
+target_link_libraries(draugr src)
