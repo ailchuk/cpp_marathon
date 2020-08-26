@@ -14,8 +14,9 @@ Draugr::Draugr(Draugr& other) : Draugr(other.m_health, 50) {
   std::cout << "Copy constructor was called\n";
 }  // 4
 
-Draugr::Draugr(Draugr&& other) : Draugr(other.m_health, other.m_frostResist) {
-  this->m_name = other.m_name;
+Draugr::Draugr(Draugr&& other)
+  : Draugr(std::move(other.m_health), std::move(other.m_frostResist)) {
+  this->m_name = std::move(other.m_name);
   std::cout << "Move constructor was called\n";
 }  // 5
 
