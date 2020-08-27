@@ -89,15 +89,15 @@ class Vector {
   size_t capacity() const { return m_capacity; };
   bool isEmpty() const { return (m_size == 0) ? true : false; }
   void resize(size_t size, const T& value = T()) {
-    if (m_size != size) {
-      Vector vec(size, value);
-      auto i = 0;
-      for (auto& elem : vec)
-        vec[i++] = elem;
-      for (; i < size;)
-        vec[i++] = value;
-      *this = vec;
+    T* new_data = new T[size];
+    for (size_t i = 0; i < m_size; ++i)
+      new_data[i] = m_buffer[i];
+    for (size_t i = m_size; i < size; ++i) {
+      new_data[i] = value;
     }
+    delete m_buffer;
+    m_buffer = new_data;
+    m_size = size;
   }
   void reserve(size_t size) {
     if (size < m_size)
@@ -126,16 +126,15 @@ class Vector {
     m_buffer[m_size++] = value;
   }
   void pop_back() { m_buffer[--m_size].~T(); }
-  // iterator insert(iterator pos, const T& value) {
-  //   if ((m_capacity - m_size) < 1)
-  //     resize();
-  //   int npos = pos - m_buffer;
-  //   for (int i = m_size; i > npos; i--) {
-  //     m_buffer[i + 1] = m_buffer[i];
-  //   }
-  //   m_buffer[npos] = value;
-  //   m_size++;
-  // };
+  iterator insert(iterator pos, const T& value) {
+    int npos = pos - m_buffer;
+    for (int i = m_size; i >= npos; i--) {
+      m_buffer[i + 1] = m_buffer[i];
+    }
+    m_buffer[npos] = value;
+    m_size++;
+    return pos;
+  }
   iterator erase(iterator pos) {
     pos->~T();
     for (auto i = const_cast<iterator>(pos); i < end() - 1; ++i)
@@ -153,7 +152,7 @@ class Vector {
     for (auto& i : (*this))
       i.~T();
     m_size = 0U;
-  };
+  }
 
  private:
   size_t m_size{0};
