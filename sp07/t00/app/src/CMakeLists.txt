@@ -1,6 +1,5 @@
 project(src)
 
-set(SOURCE_EXE constructors.cpp operators.cpp iterators.cpp capacity.cpp 
-               access.cpp modifiers.cpp)
+set(SOURCE_EXE )
 
 add_library(src STATIC ${SOURCE_EXE})
