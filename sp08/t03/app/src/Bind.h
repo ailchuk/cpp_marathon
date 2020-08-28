@@ -41,7 +41,7 @@ auto outputWeird3Arguments = std::bind(&output3Arguments<T>, std::placeholders::
 
 auto outputFusRoDah = std::bind(&output3Arguments<std::string>, "Fus", "Ro", "Dah");
 
-auto outputLovelyWords = std::bind(&outputPrintWords<std::string>, "I", "Love", "You", "!");
+auto outputLovelyWords = std::bind(&outputPrintWords<std::string>, "I", "love", "you", "!");
 
 }  // end namespace Output
 }  // end namespace SpecializedFunctions
