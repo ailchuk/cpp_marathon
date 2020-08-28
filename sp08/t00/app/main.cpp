@@ -33,9 +33,9 @@ int main(int ac, char** av) {
   } else {
     size_t w = std::stoi(av[1]);
     size_t h = std::stoi(av[2]);
-    Player *player(new Player);
+    Player* player(new Player);
     std::shared_ptr<Player> p(player);
-    std::shared_ptr<Map> m(new Map(w, h,p));
+    std::shared_ptr<Map> m(new Map(w, h, p));
     MoveManager mm(p, m);
     while (true) {
       std::string comm;
