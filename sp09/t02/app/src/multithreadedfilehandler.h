@@ -11,10 +11,9 @@ class MultithreadedFileHandler {
   void processFile() {
     std::unique_lock<std::mutex> l(m_mutex);
     
-    while(!m_fileLoaded)
+    if(!m_fileLoaded)
       m_condVar.wait(l);
-    for (const auto &it : m_file)
-      std::cout << it;
+    std::cout << m_file;
     m_fileLoaded = false;
     std::cout << "-----1 second sleep-----\n";
     std::this_thread::sleep_for(std::chrono::milliseconds(300));
@@ -30,8 +29,8 @@ class MultithreadedFileHandler {
     while (std::getline(file, buf))
       m_file += (buf + '\n');
     file.close();
-    // m_fileLoaded = (m_file.size() != 0) ? true : false;
     m_fileLoaded = true;
+    m_mutex.unlock();
     m_condVar.notify_one();
   }
 

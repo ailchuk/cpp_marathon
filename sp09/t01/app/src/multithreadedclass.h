@@ -13,10 +13,9 @@ class MultithreadedClass {
       m_int++;
   }
   void subtract(int subtractValue) {
-    m_mutex.lock();
+    std::lock_guard<std::mutex> guard(m_mutex);
     for (int i = 0; i < subtractValue; ++i)
       m_int--;
-    m_mutex.unlock();
   }
  private:
   int m_int{0};
